@@ -1,0 +1,14 @@
+syntax = "proto3";
+package kilianstallz.motivate.motivate;
+
+import "gogoproto/gogo.proto";
+import "motivate/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/kilianstallz/motivate/x/motivate/types";
+
+// GenesisState defines the motivate module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
